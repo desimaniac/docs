@@ -13,7 +13,7 @@ ls: cannot access '/dev/dri': No such file or directory
 vainfo:
 
 ```
-vainfo
+$ vainfo
 error: can't connect to X server!
 error: failed to initialize display
 Aborted (core dumped)
