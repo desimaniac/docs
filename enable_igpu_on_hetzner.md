@@ -1,15 +1,36 @@
 # Enable iGPU on Hetzner
 
 
-## See if iGPU is supported on your server:
+## iGPU not loaded
 
 
+iGPU not loaded as seen with:
+```
+$ ls -la /dev/dri
+ls: cannot access '/dev/dri': No such file or directory
+```
 
-`sudo lspci -v -s $(lspci | grep VGA | cut -d" " -f 1)`
+vainfo:
 
 ```
-Kernel modules: i915
+vainfo
+error: can't connect to X server!
+error: failed to initialize display
+Aborted (core dumped)
 ```
+
+
+
+
+See if iGPU is supported on your server:
+
+
+```
+sudo lspci -v -s $(lspci | grep VGA | cut -d" " -f 1)
+
+```
+
+Look for `Kernel modules: i915`, however, `Kernel driver in use: i915` will be missing. 
 
 
 ## Steps to enable iGPU
@@ -102,7 +123,7 @@ VAProfileVP9Profile2            :	VAEntrypointVLD
 
 
 
-
+Look for `Kernel driver in use: i915`:
 
 ```
 $ sudo lspci -v -s $(lspci | grep VGA | cut -d" " -f 1)
@@ -123,6 +144,17 @@ $ sudo lspci -v -s $(lspci | grep VGA | cut -d" " -f 1)
 	Kernel driver in use: i915
 	Kernel modules: i915
 ```
+
+
+```
+$ ls -la /dev/dri
+total 0
+drwxr-xr-x  2 root root        80 Sep 30 05:14 .
+drwxr-xr-x 20 root root      4200 Sep 30 05:14 ..
+crw-rw----  1 root video 226,   0 Sep 30 05:14 card0
+crw-rw----  1 root video 226, 128 Sep 30 05:14 renderD128
+```
+
 
 Sources:
 https://www.reddit.com/r/seedboxes/comments/57uq5e/hardware_video_encoding_on_hetzner_server_with/
