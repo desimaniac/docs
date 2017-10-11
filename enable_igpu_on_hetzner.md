@@ -1,6 +1,8 @@
 # Enable iGPU on Hetzner
 
 
+Was done on the EX41 Server with i7-7700 installed. 
+
 ## iGPU not loaded
 
 
