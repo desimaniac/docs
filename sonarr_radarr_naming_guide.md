@@ -20,7 +20,7 @@ I have always liked having my media named with the [Scene](https://scenerules.or
 
 #### Series Folder Format
 ```
-{Series.CleanTitle}.S{season:00}E{episode:00}.{Episode.CleanTitle}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
+{Series CleanTitle}
 ```
 
 #### Season Folder Format
