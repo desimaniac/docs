@@ -160,5 +160,5 @@ crw-rw----  1 root video 226, 128 Sep 30 05:14 renderD128
 
 
 Credits:
-[EnorMOZ](https://github.com/EnorMOZ)
-https://www.reddit.com/r/seedboxes/comments/57uq5e/hardware_video_encoding_on_hetzner_server_with/
+- [EnorMOZ](https://github.com/EnorMOZ)
+- https://www.reddit.com/r/seedboxes/comments/57uq5e/hardware_video_encoding_on_hetzner_server_with/
