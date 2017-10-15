@@ -134,7 +134,7 @@ These are important, or else the naming format will not work.
 | Raw-HD*      | Raw-HD             |
 
 
-\*Haven't figured out what to do with these yet. 
+\*Haven't figured out what to do with these yet so I left them as-is.
 
 
 
