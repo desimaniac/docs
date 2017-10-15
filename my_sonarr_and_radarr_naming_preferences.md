@@ -3,6 +3,11 @@ I like having my media files (loosly) named with the [scene naming style](https:
 I am posting this little guide here for anyone who may find this helpful.
 
 
+I have always liked having my media named with the [scene naming rules](https://scenerules.org/). This format is Plex compatible. Also,  I like the convenience of knowing the episode title, quality, proper, edition, and release group by just looking at the filename. 
+
+I am posting this little guide here for anyone who may find this helpful.
+
+
 ## Sonarr
 
 
@@ -37,24 +42,24 @@ These are important, or else the naming format will not work.
 
 #### Standard Episode Format
 ```
-{Series.CleanTitle}.S{season:00}E{episode:00}.{Episode.CleanTitle}.{Quality.Title}.{MediaInfo.VideoCodec}.{QUALITY.REAL}.{QUALITY.PROPER}-{RELEASE.GROUP}
+{Series.CleanTitle}.S{season:00}E{episode:00}.{Episode.CleanTitle}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
 ```
 
-`Single Episode Example: The.Series.Title.2010.S01E01.Episode.Title.1.720p.HDTV.x264.PROPER-RLSGRP`
+`Single Episode Example: The.Series.Title.2010.S01E01.Episode.Title.1.PROPER.720p.HDTV.x264-RLSGRP`
 
 #### Daily Episode Format
 ```
-{Series.CleanTitle}.{Air.Date}.{Episode.CleanTitle}.{Quality.Title}.{MediaInfo.VideoCodec}.{QUALITY.REAL}.{QUALITY.PROPER}-{RELEASE.GROUP}
+{Series.CleanTitle}.{Air.Date}.{Episode.CleanTitle}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
 ```
 
-`Daily-Episode Example: The.Series.Title.2010.2013.10.30.Episode.Title.1.720p.HDTV.x264.PROPER-RLSGRP`
+`Daily-Episode Example: The.Series.Title.2010.2013.10.30.Episode.Title.1.PROPER.720p.HDTV.x264-RLSGRP`
 
 #### Anime Episode Format
 ```
-{Series.CleanTitle}.S{season:00}E{episode:00}.{Episode.CleanTitle}.{Quality.Title}.{MediaInfo.VideoCodec}.{QUALITY.REAL}.{QUALITY.PROPER}-{RELEASE.GROUP}
+{Series.CleanTitle}.S{season:00}E{episode:00}.{Episode.CleanTitle}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
 ```
 
-`Anime Episode Example: The.Series.Title.2010.S01E01.Episode.Title.1.720p.HDTV.x264.V2-RLSGRP`
+`Anime Episode Example: The.Series.Title.2010.S01E01.Episode.Title.1.V2.720p.HDTV.x264-RLSGRP`
 
 
 #### Series Folder Format
@@ -79,9 +84,9 @@ Padding the season numbers (e.g. `01`, `02`, etc) helps with shows that have mor
 Prefixed Range
 ```
 
-`Multi-Episode Example: The.Series.Title.2010.S01E01-E03.Episode.Title.720p.HDTV.x264.PROPER-RLSGRP`
+`Multi-Episode Example: The.Series.Title.2010.S01E01-E03.Episode.Title.PROPER.720p.HDTV.x264-RLSGRP`
 
-`Anime Multi-Episode Example: The.Series.Title.2010.S01E01-E03.Episode.Title.720p.HDTV.x264.V2-RLSGRP`
+`Anime Multi-Episode Example: The.Series.Title.2010.S01E01-E03.Episode.Title.V2.720p.HDTV.x264-RLSGRP`
 
 Not exactly the preferred "scene" way (i.e. `Repeat` style), but `Prefixed Range` works better if you have many more episodes in one file. It is also the naming style that is recommended by [Plex](https://support.plex.tv/hc/en-us/articles/200220687-Naming-Series-Season-Based-TV-Shows).
 
@@ -145,10 +150,10 @@ These are important, or else the naming format will not work.
 
 #### Standard Movie Format
 ```
-{Movie.CleanTitle}.{Release.Year}.{EDITION.TAGS}.{Quality.Title}.{MediaInfo.VideoCodec}.{QUALITY.REAL}.{QUALITY.PROPER}-{RELEASE.GROUP}
+{Movie.CleanTitle}.{Release.Year}.{EDITION.TAGS}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
 ```
 
-`Movie Example: The.Movie.Title.2010.ULTIMATE.EXTENDED.EDITION.1080p.BluRay.x264.PROPER-EVOLVE`
+`Movie Example: The.Movie.Title.2010.ULTIMATE.EXTENDED.EDITION.PROPER.1080p.BluRay.x264-EVOLVE`
 
 #### Movie Folder Format
 ```
