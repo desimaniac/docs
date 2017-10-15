@@ -1,4 +1,4 @@
-I have always liked having my media named with the [Scene](https://scenerules.org/) naming rules. I like the convenience of knowing the episode title, quality, proper, edition, and release group by just looking at the filename. This format is Plex compatible and I am posting this here for anyone who may find this helpful.
+I have always liked having my media named with the [scene naming rules](https://scenerules.org/). I like the convenience of knowing the episode title, quality, proper, edition, and release group by just looking at the filename. This format is Plex compatible and I am posting this here for anyone who may find this helpful.
 
 
 ## Sonarr
@@ -78,9 +78,9 @@ Prefixed Range
 
 `Anime Multi-Episode Example: The.Series.Title.2010.S01E01-E03.Episode.Title.V2.720p.HDTV.x264-RLSGRP`
 
-Not exactly the preferred Scene way (i.e. `Repeat` style), but `Prefixed Range` works better if you have many more episodes in one file (it is also the naming style that is recommended by [Plex](https://support.plex.tv/hc/en-us/articles/200220687-Naming-Series-Season-Based-TV-Shows)).
+Not exactly the preferred "scene" way (i.e. `Repeat` style), but `Prefixed Range` works better if you have many more episodes in one file. It is also the naming style that is recommended by [Plex](https://support.plex.tv/hc/en-us/articles/200220687-Naming-Series-Season-Based-TV-Shows).
 
-An example would be a TV special you downloaded that had all the webisodes in one file; it would be better to have it named as `S00E01-E10`, than `S01E01E02E03E04E05E06E07E08E09E10`.
+An example would be a TV special you downloaded that had all the webisodes in one file; it would be far better to have it named as `S00E01-E10`, than `S01E01E02E03E04E05E06E07E08E09E10`.
 
 
 
