@@ -37,24 +37,24 @@ These are important, or else the naming format will not work.
 
 #### Standard Episode Format
 ```
-{Series.CleanTitle}.S{season:00}E{episode:00}.{Episode.CleanTitle}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
+{Series.CleanTitle}.S{season:00}E{episode:00}.{Episode.CleanTitle}.{Quality.Title}.{MediaInfo.VideoCodec}.{QUALITY.REAL}.{QUALITY.PROPER}-{RELEASE.GROUP}
 ```
 
-`Single Episode Example: The.Series.Title.2010.S01E01.Episode.Title.1.PROPER.720p.HDTV.x264-RLSGRP`
+`Single Episode Example: The.Series.Title.2010.S01E01.Episode.Title.1.720p.HDTV.x264.PROPER-RLSGRP`
 
 #### Daily Episode Format
 ```
-{Series.CleanTitle}.{Air.Date}.{Episode.CleanTitle}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
+{Series.CleanTitle}.{Air.Date}.{Episode.CleanTitle}.{Quality.Title}.{MediaInfo.VideoCodec}.{QUALITY.REAL}.{QUALITY.PROPER}-{RELEASE.GROUP}
 ```
 
-`Daily-Episode Example: The.Series.Title.2010.2013.10.30.Episode.Title.1.PROPER.720p.HDTV.x264-RLSGRP`
+`Daily-Episode Example: The.Series.Title.2010.2013.10.30.Episode.Title.1.720p.HDTV.x264.PROPER-RLSGRP`
 
 #### Anime Episode Format
 ```
-{Series.CleanTitle}.S{season:00}E{episode:00}.{Episode.CleanTitle}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
+{Series.CleanTitle}.S{season:00}E{episode:00}.{Episode.CleanTitle}.{Quality.Title}.{MediaInfo.VideoCodec}.{QUALITY.REAL}.{QUALITY.PROPER}-{RELEASE.GROUP}
 ```
 
-`Anime Episode Example: The.Series.Title.2010.S01E01.Episode.Title.1.V2.720p.HDTV.x264-RLSGRP`
+`Anime Episode Example: The.Series.Title.2010.S01E01.Episode.Title.1.720p.HDTV.x264.V2-RLSGRP`
 
 
 #### Series Folder Format
@@ -79,9 +79,9 @@ Padding the season numbers (e.g. `01`, `02`, etc) helps with shows that have mor
 Prefixed Range
 ```
 
-`Multi-Episode Example: The.Series.Title.2010.S01E01-E03.Episode.Title.PROPER.720p.HDTV.x264-RLSGRP`
+`Multi-Episode Example: The.Series.Title.2010.S01E01-E03.Episode.Title.720p.HDTV.x264.PROPER-RLSGRP`
 
-`Anime Multi-Episode Example: The.Series.Title.2010.S01E01-E03.Episode.Title.V2.720p.HDTV.x264-RLSGRP`
+`Anime Multi-Episode Example: The.Series.Title.2010.S01E01-E03.Episode.Title.720p.HDTV.x264.V2-RLSGRP`
 
 Not exactly the preferred "scene" way (i.e. `Repeat` style), but `Prefixed Range` works better if you have many more episodes in one file. It is also the naming style that is recommended by [Plex](https://support.plex.tv/hc/en-us/articles/200220687-Naming-Series-Season-Based-TV-Shows).
 
