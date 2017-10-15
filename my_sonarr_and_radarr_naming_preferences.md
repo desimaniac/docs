@@ -32,6 +32,9 @@ These are important, or else the naming format will not work.
 
 ### Episode Naming
 
+#### Replace Illegal Characters `Yes`
+
+
 #### Standard Episode Format
 ```
 {Series.CleanTitle}.S{season:00}E{episode:00}.{Episode.CleanTitle}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
