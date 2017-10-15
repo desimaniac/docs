@@ -145,10 +145,10 @@ These are important, or else the naming format will not work.
 
 #### Standard Movie Format
 ```
-{Movie.CleanTitle}.{Release.Year}.{EDITION.TAGS}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
+{Movie.CleanTitle}.{Release.Year}.{EDITION.TAGS}.{Quality.Title}.{MediaInfo.VideoCodec}.{QUALITY.REAL}.{QUALITY.PROPER}-{RELEASE.GROUP}
 ```
 
-`Movie Example: The.Movie.Title.2010.ULTIMATE.EXTENDED.EDITION.PROPER.1080p.BluRay.x264-EVOLVE`
+`Movie Example: The.Movie.Title.2010.ULTIMATE.EXTENDED.EDITION.1080p.BluRay.x264.PROPER-EVOLVE`
 
 #### Movie Folder Format
 ```
