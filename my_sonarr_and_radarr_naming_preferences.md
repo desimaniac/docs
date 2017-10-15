@@ -67,7 +67,7 @@ Season {season:00}
 
 `Season Folder Example: Season 01`
 
-Padding (i.e. Season `01`, `02`, etc) is helpful for shows where you have more than 10 seasons.
+Padding the season numbers (e.g. `01`, `02`, etc) helps with shows that have more than 10 seasons.
 
 #### Multi-Episode Style
 ```
