@@ -94,7 +94,7 @@ An example would be a TV special you downloaded that had all the webisodes in on
 ## Radarr
 
 
-## Quality Definitions
+### Quality Definitions
 
 These are important, or else the naming format will not work. 
 
