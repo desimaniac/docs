@@ -72,7 +72,7 @@ Season {season:00}
 
 `Season Folder Example: Season 01`
 
-Padding the season numbers (e.g. `01`, `02`, etc) helps with shows that have more than 10 seasons.
+Padding the season numbers (e.g. `01`, `02`, etc) is preferred by the scene as this is helpful for shows with more than 10 seasons.
 
 #### Multi-Episode Style
 ```
@@ -83,7 +83,7 @@ Prefixed Range
 
 `Anime Multi-Episode Example: The.Series.Title.2010.S01E01-E03.Episode.Title.V2.720p.HDTV.x264-RLSGRP`
 
-Not exactly the preferred "scene" way (i.e. `Repeat` style), but `Prefixed Range` works better if you have many more episodes in one file. It is also the naming style that is recommended by [Plex](https://support.plex.tv/hc/en-us/articles/200220687-Naming-Series-Season-Based-TV-Shows).
+Even though releases sometimes use S01E01E02 format, the scene prefers S01E01-E02 (i.e. `Prefixed Range`), which also the naming style recommended by [Plex](https://support.plex.tv/hc/en-us/articles/200220687-Naming-Series-Season-Based-TV-Shows).
 
 An example would be a TV special you downloaded that had all the webisodes in one file; it would be far better to have it named as `S00E01-E10`, than `S01E01E02E03E04E05E06E07E08E09E10`.
 
