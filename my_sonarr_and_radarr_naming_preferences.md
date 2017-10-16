@@ -83,9 +83,7 @@ Prefixed Range
 
 `Anime Multi-Episode Example: The.Series.Title.2010.S01E01-E03.Episode.Title.V2.720p.HDTV.x264-RLSGRP`
 
-Even though releases sometimes use S01E01E02 format, the scene prefers S01E01-E02 (i.e. `Prefixed Range`), which also the naming style recommended by [Plex](https://support.plex.tv/hc/en-us/articles/200220687-Naming-Series-Season-Based-TV-Shows).
-
-An example would be a TV special you downloaded that had all the webisodes in one file; it would be far better to have it named as `S00E01-E10`, than `S01E01E02E03E04E05E06E07E08E09E10`.
+Even though releases sometimes use the `repeat` style for multi episode TV shows (e.g. S01E01E02), the scene actually prefers the `Prefixed Range` style (e.g. S01E01-E02), which also the naming style [Plex](https://support.plex.tv/hc/en-us/articles/200220687-Naming-Series-Season-Based-TV-Shows) recommends.
 
 
 
