@@ -45,7 +45,6 @@ Hetzner disables loading of video card drivers unless install desktop OS. So to 
   
    Before:
    ```shell
-   $ cat /etc/modprobe.d/blacklist-hetzner.conf
    ### Hetzner Online GmbH - installimage
    ### silence any onboard speaker
    blacklist pcspkr
@@ -62,7 +61,6 @@ Hetzner disables loading of video card drivers unless install desktop OS. So to 
   
    After:
    ```shell
-   $ cat /etc/modprobe.d/blacklist-hetzner.conf
    ### Hetzner Online GmbH - installimage
    ### silence any onboard speaker
    blacklist pcspkr
@@ -77,11 +75,10 @@ Hetzner disables loading of video card drivers unless install desktop OS. So to 
    ```
 
 
-2. Open `/etc/default/grub.d/hetzner.cfg` (e.g. `sudo nano /etc/default/grub.d/hetzner.cfg`) and replace the line with `GRUB_CMDLINE_LINUX_DEFAULT="nomodeset net.ifnames=0"` to `GRUB_CMDLINE_LINUX_DEFAULT="net.ifnames=0"`.
+2. Open `/etc/default/grub.d/hetzner.cfg` (e.g. `sudo nano /etc/default/grub.d/hetzner.cfg`) and delete `nomodeset` from the   `GRUB_CMDLINE_LINUX_DEFAULT=` line. See the example below:
 
    Before: 
    ```shell
-   $ cat /etc/default/grub.d/hetzner.cfg
    GRUB_HIDDEN_TIMEOUT_QUIET=false
    GRUB_CMDLINE_LINUX_DEFAULT="nomodeset net.ifnames=0"
 
@@ -91,7 +88,6 @@ Hetzner disables loading of video card drivers unless install desktop OS. So to 
    
    After: 
    ```shell
-   $ cat /etc/default/grub.d/hetzner.cfg
    GRUB_HIDDEN_TIMEOUT_QUIET=false
    GRUB_CMDLINE_LINUX_DEFAULT="net.ifnames=0"
 
