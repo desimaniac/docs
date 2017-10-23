@@ -167,7 +167,7 @@ VAProfileVP9Profile2            :	VAEntrypointVLD
 
 
 
-You can also check by running the following command and seeing `Kernel driver in use: i915`.
+You can also check by running `sudo lspci -v -s $(lspci | grep VGA | cut -d" " -f 1)` and finding `Kernel driver in use: i915`.
 
 ```
 $ sudo lspci -v -s $(lspci | grep VGA | cut -d" " -f 1)
