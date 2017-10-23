@@ -205,8 +205,7 @@ $ sudo lspci -v -s $(lspci | grep VGA | cut -d" " -f 1)
 
 3. Enable HW Acceleration in Plex: Settings -> Server -> Transcoder -> enable `Use hardware acceleration when available`.
 
+---
 
-
-<sub>	
- Source: https://www.reddit.com/r/seedboxes/comments/57uq5e/hardware_video_encoding_on_hetzner_server_with/
+<sub>Credit: </sub></br><sub>https://www.reddit.com/r/seedboxes/comments/57uq5e/hardware_video_encoding_on_hetzner_server_with/
 </sub>
