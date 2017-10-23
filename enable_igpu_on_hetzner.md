@@ -1,18 +1,18 @@
-# Enable iGPU on Hetzner
+# How to enable iGPU on Hetzner (for HW Acceleration on Plex)
 
 
-Was done on the EX41 Server with i7-7700 installed. 
+Note: This was tested on the Hetzner's EX41-SSD Server (Intel i7-7700), but should work for other supported Intel based servers on Hetzner (see [here](https://support.plex.tv/hc/en-us/articles/115002178853-Using-Hardware-Accelerated-Streaming) and [here](https://en.wikipedia.org/wiki/Intel_Quick_Sync_Video))
 
-## iGPU not loaded
+## When iGPU isnt loaded...
 
+`/dev/dri` path will be missing...
 
-iGPU not loaded as seen with:
 ```
 $ ls -la /dev/dri
 ls: cannot access '/dev/dri': No such file or directory
 ```
 
-vainfo:
+`vainfo` will show this:
 
 ```
 $ vainfo
@@ -21,65 +21,110 @@ error: failed to initialize display
 Aborted (core dumped)
 ```
 
+Note: You may have to install `vainfo` via `sudo apt-get install vainfo`. 
 
 
+## How to see if iGPU is supported on your server
 
-See if iGPU is supported on your server:
 
-
-```
+Run the following command:
+```bash
 sudo lspci -v -s $(lspci | grep VGA | cut -d" " -f 1)
 
 ```
 
-Look for `Kernel modules: i915`, however, `Kernel driver in use: i915` will be missing. 
+If your server supports iGPU, you will see something similar to `Kernel modules: i915`. However, kernel driver will not be loaded (i.e. `Kernel driver in use: i915` will be missing).
 
 
 ## Steps to enable iGPU
 
-Hetzner disables loading of video card drivers by default until login to the desktop, which you never do when running a server. They also seem to blacklist i915 drivers. To get VA-API to work on Hetzner, you have to make the following changes:
+Hetzner disables loading of video card drivers unless install desktop OS. So to enable the loading of the drivers (ie. VA-AI) follow the steps below:
 
-Comment all line referencing i915 in `/etc/modprobe.d/blacklist-hetzner.conf`:
+1. Open `/etc/modprobe.d/blacklist-hetzner.conf` (e.g. `sudo nano /etc/modprobe.d/blacklist-hetzner.conf`) and comment-out (add a `#` in front of) all lines referencing `i915` driver or similar. 
 
-```shell
-$ cat /etc/modprobe.d/blacklist-hetzner.conf
-### Hetzner Online GmbH - installimage
-### silence any onboard speaker
-blacklist pcspkr
-blacklist snd_pcsp
-### i915 driver blacklisted due to various bugs
-### especially in combination with nomodeset
-#blacklist i915
-#blacklist i915_bdw
-### mei driver blacklisted due to serious bugs
-blacklist mei
-blacklist mei-me
-```
+  
+   Before:
+   ```shell
+   $ cat /etc/modprobe.d/blacklist-hetzner.conf
+   ### Hetzner Online GmbH - installimage
+   ### silence any onboard speaker
+   blacklist pcspkr
+   blacklist snd_pcsp
+   ### i915 driver blacklisted due to various bugs
+   ### especially in combination with nomodeset
+   blacklist i915 
+   blacklist i915_bdw
+   ### mei driver blacklisted due to serious bugs
+   blacklist mei
+   blacklist mei-me
+   ```
+  
+  
+   After:
+   ```shell
+   $ cat /etc/modprobe.d/blacklist-hetzner.conf
+   ### Hetzner Online GmbH - installimage
+   ### silence any onboard speaker
+   blacklist pcspkr
+   blacklist snd_pcsp
+   ### i915 driver blacklisted due to various bugs
+   ### especially in combination with nomodeset
+   #blacklist i915 
+   #blacklist i915_bdw
+   ### mei driver blacklisted due to serious bugs
+   blacklist mei
+   blacklist mei-me
+   ```
 
 
-Hetzner's default grub config blocks loading of video card drivers. Change `GRUB_CMDLINE_LINUX_DEFAULT="nomodeset net.ifnames=0"` to `GRUB_CMDLINE_LINUX_DEFAULT="net.ifnames=0"` in `/etc/default/grub.d/hetzner.cfg`.
+2. Open `/etc/default/grub.d/hetzner.cfg` (e.g. `sudo nano /etc/default/grub.d/hetzner.cfg`) and replace the line with `GRUB_CMDLINE_LINUX_DEFAULT="nomodeset net.ifnames=0"` to `GRUB_CMDLINE_LINUX_DEFAULT="net.ifnames=0"`.
 
-```shell
-$ cat /etc/default/grub.d/hetzner.cfg
-GRUB_HIDDEN_TIMEOUT_QUIET=false
-GRUB_CMDLINE_LINUX_DEFAULT="net.ifnames=0"
+   Before: 
+   ```shell
+   $ cat /etc/default/grub.d/hetzner.cfg
+   GRUB_HIDDEN_TIMEOUT_QUIET=false
+   GRUB_CMDLINE_LINUX_DEFAULT="nomodeset net.ifnames=0"
 
-# only use text mode - other modes may scramble screen
-GRUB_GFXPAYLOAD_LINUX="text"
-```
+   # only use text mode - other modes may scramble screen
+   GRUB_GFXPAYLOAD_LINUX="text"
+   ```   
+   
+   After: 
+   ```shell
+   $ cat /etc/default/grub.d/hetzner.cfg
+   GRUB_HIDDEN_TIMEOUT_QUIET=false
+   GRUB_CMDLINE_LINUX_DEFAULT="net.ifnames=0"
 
-Reload grub and reboot.
-```
-sudo grub-mkconfig -o /boot/grub/grub.cfg
-sudo reboot
+   # only use text mode - other modes may scramble screen
+   GRUB_GFXPAYLOAD_LINUX="text"
+   ```
 
-```
+3. Reload grub and reboot.
+   
+   ```shell
+   sudo grub-mkconfig -o /boot/grub/grub.cfg
+   sudo reboot
+   ```
 
 
 ## Verifying iGPU is enabled
 
+`/dev/dri` will now exist with similar contents as below:
 
 ```
+$ ls -la /dev/dri
+total 0
+drwxr-xr-x  2 root root        80 Sep 30 05:14 .
+drwxr-xr-x 20 root root      4200 Sep 30 05:14 ..
+crw-rw----  1 root video 226,   0 Sep 30 05:14 card0
+crw-rw----  1 root video 226, 128 Sep 30 05:14 renderD128
+```
+
+
+
+`vainfo` will now show the details on the video driver.
+
+```shell
 $ vainfo
 error: can't connect to X server!
 libva info: VA-API version 0.39.0
@@ -122,10 +167,7 @@ VAProfileVP9Profile2            :	VAEntrypointVLD
 
 
 
-
-
-
-Look for `Kernel driver in use: i915`:
+You can also check by running the following command and seeing `Kernel driver in use: i915`.
 
 ```
 $ sudo lspci -v -s $(lspci | grep VGA | cut -d" " -f 1)
@@ -148,14 +190,20 @@ $ sudo lspci -v -s $(lspci | grep VGA | cut -d" " -f 1)
 ```
 
 
-```
-$ ls -la /dev/dri
-total 0
-drwxr-xr-x  2 root root        80 Sep 30 05:14 .
-drwxr-xr-x 20 root root      4200 Sep 30 05:14 ..
-crw-rw----  1 root video 226,   0 Sep 30 05:14 card0
-crw-rw----  1 root video 226, 128 Sep 30 05:14 renderD128
-```
+
+
+## Get HW acceleration enabled for Plex on Cloudbox
+
+1. Currently hardware acceleration is only supported for Plex Pass members. You'll need to make sure that the Cloudbox settings.yml file has `plexpass` tag for Plex (see [here](https://github.com/l3uddz/cloudbox/wiki/Configuring-Settings)).
+
+
+2. Update the Plex container (your database and settings will remain intact).
+
+   ```shell
+   sudo ansible-playbook cloudbox.yml --tags update-plex
+   ```
+
+3. Enable HW Acceleration in Plex: Settings -> Server -> Transcoder -> enable `Use hardware acceleration when available`.
 
 
 
