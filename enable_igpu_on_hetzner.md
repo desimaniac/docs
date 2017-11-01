@@ -192,7 +192,7 @@ $ sudo lspci -v -s $(lspci | grep VGA | cut -d" " -f 1)
 
 Currently, hardware acceleration is only supported for Plex Pass members. 
 
-Note: **ALL** 3 steps below are essential!
+_Note: **ALL** 3 steps below are essential!_
 
 1. Add the `plexpass` tag to the Cloudbox settings.yml, if it isn't already there (see [this](https://github.com/l3uddz/cloudbox/wiki/Configuring-Settings)).
 
