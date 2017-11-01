@@ -118,7 +118,7 @@ crw-rw----  1 root video 226, 128 Sep 30 05:14 renderD128
 
 
 
-`vainfo` will now show the details on the video driver.
+`vainfo` will now show the details of the video driver.
 
 ```shell
 $ vainfo
