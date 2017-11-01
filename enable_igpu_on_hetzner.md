@@ -190,7 +190,9 @@ $ sudo lspci -v -s $(lspci | grep VGA | cut -d" " -f 1)
 
 ## Enable HW acceleration on Cloudbox Plex
 
-Currently, hardware acceleration is only supported for Plex Pass members.
+Currently, hardware acceleration is only supported for Plex Pass members. 
+
+Note: **ALL** 3 steps below are essential!
 
 1. Add the `plexpass` tag to the Cloudbox settings.yml, if it isn't already there (see [this](https://github.com/l3uddz/cloudbox/wiki/Configuring-Settings)).
 
@@ -201,7 +203,7 @@ Currently, hardware acceleration is only supported for Plex Pass members.
    sudo ansible-playbook cloudbox.yml --tags update-plex
    ```
    
-   _Note: This step essential! It adds `/dev/dri` to the Plex container._ 
+   _Note: This step adds `/dev/dri` to the Plex container._ 
 
 3. Enable HW Acceleration in Plex: Settings -> Server -> Transcoder -> enable `Use hardware acceleration when available`.
 
