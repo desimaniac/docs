@@ -200,6 +200,8 @@ Currently, hardware acceleration is only supported for Plex Pass members.
    ```shell
    sudo ansible-playbook cloudbox.yml --tags update-plex
    ```
+   
+   Note: This step essential because it adds `/dev/dri` as a device to the Plex container. 
 
 3. Enable HW Acceleration in Plex: Settings -> Server -> Transcoder -> enable `Use hardware acceleration when available`.
 
