@@ -203,7 +203,7 @@ _Note: **ALL** 3 steps below are essential!_
    sudo ansible-playbook cloudbox.yml --tags update-plex
    ```
    
-   _Note: This step adds `/dev/dri` to the Plex container._ 
+   _Note: This step adds `/dev/dri` to the Plex container. It won't work without it._ 
 
 3. Enable HW Acceleration in Plex: Settings -> Server -> Transcoder -> enable `Use hardware acceleration when available`.
 
