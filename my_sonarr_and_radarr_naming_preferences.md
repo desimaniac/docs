@@ -1,9 +1,10 @@
 I like having my media files (loosly) named with the [scene naming style](https://scenerules.org/). This format _is_ Plex compatible and informative (_I like the convenience of knowing the episode title, quality, proper, edition, and release group by just looking at the filename_). 
 
+```
 Examples:
-- `Gotham.S01E01.720p.BluRay.x264-DEMAND.mkv`
-
-- `Guardians.of.the.Galaxy.Vol.2.2017.1080p.BluRay.x264-SPARKS`
+- Gotham.S01E01.720p.BluRay.x264-DEMAND.mkv
+- Guardians.of.the.Galaxy.Vol.2.2017.1080p.BluRay.x264-SPARKS
+```
 
 I am posting this template here for anyone who may find this helpful.
 
