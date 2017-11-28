@@ -148,6 +148,7 @@ These are important, or else the naming format will not work.
 
 `Movie Example: The.Movie.Title.2010.ULTIMATE.EXTENDED.EDITION.PROPER.1080p.BluRay.x264-EVOLVE`
 
+
 #### Movie Folder Format
 ```
 {Movie CleanTitle} ({Release Year})
