@@ -1,4 +1,4 @@
-I like having my media files (loosly) named with the [scene naming style](https://scenerules.org/). This format is Plex compatible. Also,  I like the convenience of knowing the episode title, quality, proper, edition, and release group by just looking at the filename. 
+I like having my media files (loosly) named with the [scene naming style](https://scenerules.org/). This format _is_ Plex compatible and informative (_I like the convenience of knowing the episode title, quality, proper, edition, and release group by just looking at the filename_). 
 
 I am posting this little guide here for anyone who may find this helpful.
 
