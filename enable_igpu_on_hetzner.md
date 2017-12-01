@@ -207,6 +207,48 @@ _Note: **ALL** 3 steps below are essential!_
 
 3. Enable HW Acceleration in Plex: Settings -> Server -> Transcoder -> enable `Use hardware acceleration when available`.
 
+
+
+
+## Testing
+
+Plex Server: Version 1.10.0.4523 
+Plex transcode: UHD HEVC Remux movie -> 4mbps 720p HD.
+
+### CPU Usage (`htop`)
+
+Without HW Accleration: ~550%
+
+![](https://i.imgur.com/ruyvBjW.png)
+
+With HW Acceleration: ~60%
+
+![](https://i.imgur.com/5tZg78e.png)
+
+
+### iGPU Usage (`intel_gpu_top`)
+
+With HW Acceleration:
+
+![](https://i.imgur.com/qHbNtLR.png)
+
+### Intel GPU Top tool
+
+To install it: 
+
+- `sudo add-apt-repository https://apt.fury.io/mdupain/`
+
+- `sudo apt-get update`
+
+- `sudo apt-get install intel-gpu-tools`
+
+To run it:
+
+- `sudo intel_gpu_top`
+
+
+
+
 ---
 
 <sub>Credit: </sub></br><sub>https://www.reddit.com/r/seedboxes/comments/57uq5e/hardware_video_encoding_on_hetzner_server_with/
