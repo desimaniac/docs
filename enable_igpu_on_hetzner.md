@@ -224,7 +224,7 @@ Without HW Accleration: ~550%
 
 With HW Acceleration: ~40%
 
-![](https://i.imgur.com/5tZg78e.png)
+![](https://i.imgur.com/x2GknKc.png)
 
 
 ### iGPU Usage (`intel_gpu_top`)
