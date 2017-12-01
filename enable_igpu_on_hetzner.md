@@ -210,7 +210,7 @@ _Note: **ALL** 3 steps below are essential!_
 
 
 
-## Testing
+## Tests
 
 Plex Server: Version 1.10.0.4523 <br />
 Plex transcode: UHD HEVC Remux --> 4Mbps 720p HD.
