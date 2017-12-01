@@ -241,10 +241,6 @@ With HW Acceleration:
 
 To install it: 
 
-- `sudo add-apt-repository https://apt.fury.io/mdupain/`
-
-- `sudo apt-get update`
-
 - `sudo apt-get install intel-gpu-tools`
 
 To run it:
