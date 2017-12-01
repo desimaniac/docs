@@ -222,7 +222,7 @@ Without HW Accleration: ~550%
 ![](https://i.imgur.com/ruyvBjW.png)
 
 
-With HW Acceleration: ~60%
+With HW Acceleration: ~40%
 
 ![](https://i.imgur.com/5tZg78e.png)
 
