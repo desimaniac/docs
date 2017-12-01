@@ -219,7 +219,7 @@ Plex transcode: UHD HEVC Remux movie --> 4Mbps 720p HD.
 
 Without HW Accleration: ~550%
 
-![](https://i.imgur.com/ruyvBjW.png)
+![](https://i.imgur.com/l8xTmi8.png)
 
 
 With HW Acceleration: ~40%
