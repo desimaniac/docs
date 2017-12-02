@@ -223,7 +223,7 @@ Plex transcode: Movie @ 1080p Remux (h264) --> 4Mbps 720p HD (h264).
 
 Without HW Accleration: ~550%
 
-![](https://i.imgur.com/AP7XmW4.png)
+![](https://i.imgur.com/o1f4PUV.png)
 
 
 With HW Acceleration: ~40%
