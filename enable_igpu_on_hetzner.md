@@ -213,7 +213,7 @@ _Note: **ALL** 3 steps below are essential!_
 ## Tests
 
 Plex Server: Version 1.10.0.4523 <br />
-Plex transcode: UHD Remux (hevc) --> 4Mbps 720p HD (x264).
+Plex transcode: Movie UHD/4K Remux (hevc) --> 4Mbps 720p HD (x264).
 
 ### CPU Usage (`htop`)
 
