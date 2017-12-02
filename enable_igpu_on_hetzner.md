@@ -217,7 +217,7 @@ _Note: **ALL** 3 steps below are essential!_
 
 
 Plex Server: Version 1.10.0.4523 <br />
-Plex transcode: Movie @ 1080p Remux (h264) --> 4Mbps 720p HD (h264).
+Plex transcode: Movie @ 1080p Remux (H264) --> 4Mbps 720p HD (H264).
 
 #### CPU Usage (`htop`)
 
@@ -247,7 +247,7 @@ With HW Acceleration:
 ### Test 2
 
 Plex Server: Version 1.10.0.4523 <br />
-Plex transcode: Movie @ UHD/4K Remux (hevc) --> 4Mbps 720p HD (h264).
+Plex transcode: Movie @ UHD/4K Remux (HEVC) --> 4Mbps 720p HD (H264).
 
 #### CPU Usage (`htop`)
 
