@@ -1,4 +1,4 @@
-# How to enable iGPU on Hetzner (for HW Acceleration in Plex)
+# How to enable iGPU on Hetzner (for Hardware Accelerated Transcoding in Plex)
 
 
 Note: This was tested on the Hetzner's EX41-SSD Server (Intel i7-7700), but should work on other Hetzner servers with supported Intel CPUs (see [this](https://support.plex.tv/hc/en-us/articles/115002178853-Using-Hardware-Accelerated-Streaming) and [this](https://en.wikipedia.org/wiki/Intel_Quick_Sync_Video)).
