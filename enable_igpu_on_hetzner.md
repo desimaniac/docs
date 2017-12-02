@@ -212,10 +212,44 @@ _Note: **ALL** 3 steps below are essential!_
 
 ## Tests
 
-Plex Server: Version 1.10.0.4523 <br />
-Plex transcode: Movie UHD/4K Remux (hevc) --> 4Mbps 720p HD (x264).
+### Test 1
 
-### CPU Usage (`htop`)
+
+
+Plex Server: Version 1.10.0.4523 <br />
+Plex transcode: Movie 1080p Remux (h264) --> 4Mbps 720p HD (h264).
+
+#### CPU Usage (`htop`)
+
+Without HW Accleration: ~550%
+
+![](https://i.imgur.com/AP7XmW4.png)
+
+
+With HW Acceleration: ~40%
+
+![](https://i.imgur.com/0vHb5YP.png)
+
+
+#### iGPU Usage (`intel_gpu_top`)
+
+Without HW Acceleration:
+
+![](https://i.imgur.com/SqQoij3.png)
+
+With HW Acceleration:
+
+![](https://i.imgur.com/NbzMP2q.png)
+
+
+
+
+### Test 2
+
+Plex Server: Version 1.10.0.4523 <br />
+Plex transcode: Movie UHD/4K Remux (hevc) --> 4Mbps 720p HD (h264).
+
+#### CPU Usage (`htop`)
 
 Without HW Accleration: ~550%
 
@@ -227,7 +261,7 @@ With HW Acceleration: ~40%
 ![](https://i.imgur.com/x2GknKc.png)
 
 
-### iGPU Usage (`intel_gpu_top`)
+#### iGPU Usage (`intel_gpu_top`)
 
 Without HW Acceleration:
 
