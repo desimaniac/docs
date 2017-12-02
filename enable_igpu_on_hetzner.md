@@ -251,7 +251,7 @@ Plex transcode: Movie @ UHD/4K Remux (hevc) --> 4Mbps 720p HD (h264).
 
 #### CPU Usage (`htop`)
 
-Without HW Accleration: ~550%
+Without HW Accleration: ~450%
 
 ![](https://i.imgur.com/l8xTmi8.png)
 
