@@ -214,8 +214,8 @@ _Note: **ALL** 3 steps below are essential!_
 
 ### Test 1
 
-CPU: [Intel Core i7-7700](https://ark.intel.com/products/97128/Intel-Core-i7-7700-Processor-8M-Cache-up-to-4_20-GHz)
-OS: Ubuntu 16.04 LTS
+CPU: [Intel Core i7-7700](https://ark.intel.com/products/97128/Intel-Core-i7-7700-Processor-8M-Cache-up-to-4_20-GHz) <br />
+OS: Ubuntu 16.04 LTS <br />
 Plex Server ([docker](https://github.com/plexinc/pms-docker)): 1.10.0.4523 <br />
 Plex transcode: Movie @ 1080p Remux (H264) --> 4Mbps 720p HD (H264).
 
