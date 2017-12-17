@@ -24,7 +24,7 @@ Aborted (core dumped)
 Note: You may have to install `vainfo` via `sudo apt-get install vainfo`. 
 
 
-## How to see if iGPU is supported on your server
+## See if iGPU is supported on your server
 
 
 Run the following command:
@@ -103,7 +103,7 @@ Hetzner disables loading of video card drivers unless install desktop OS. So to 
    ```
 
 
-## Verifying iGPU is enabled
+## Verify iGPU is enabled
 
 `/dev/dri` will now exist with similar contents as below:
 
