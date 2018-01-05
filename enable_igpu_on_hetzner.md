@@ -250,7 +250,7 @@ With HW Acceleration:
 CPU: [Intel Core i7-7700](https://ark.intel.com/products/97128/Intel-Core-i7-7700-Processor-8M-Cache-up-to-4_20-GHz) <br />
 OS: Ubuntu 16.04 LTS <br />
 Plex Server ([docker](https://github.com/plexinc/pms-docker)): 1.10.0.4523 <br />
-Plex transcode: Movie @ UHD/4K BluRay Remux (HEVC) --> 4Mbps 720p HD (H264).
+Plex transcode: Movie @ 2160p (4K-UHD) BluRay Remux (HEVC) --> 4Mbps 720p HD (H264).
 
 #### CPU Usage (`htop`)
 
