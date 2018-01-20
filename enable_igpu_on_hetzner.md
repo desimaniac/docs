@@ -190,6 +190,19 @@ $ sudo lspci -v -s $(lspci | grep VGA | cut -d" " -f 1)
 
 ## Tests
 
+
+### Intel GPU Top tool
+
+To install it: 
+
+- `sudo apt-get install intel-gpu-tools`
+
+To run it:
+
+- `sudo intel_gpu_top`
+
+
+
 ### Test 1
 
 CPU: [Intel Core i7-7700](https://ark.intel.com/products/97128/Intel-Core-i7-7700-Processor-8M-Cache-up-to-4_20-GHz) <br />
@@ -251,16 +264,6 @@ Without HW Acceleration:
 With HW Acceleration:
 
 ![](https://i.imgur.com/qHbNtLR.png)
-
-### Intel GPU Top tool
-
-To install it: 
-
-- `sudo apt-get install intel-gpu-tools`
-
-To run it:
-
-- `sudo intel_gpu_top`
 
 
 
