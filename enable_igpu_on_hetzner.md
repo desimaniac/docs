@@ -186,6 +186,7 @@ $ sudo lspci -v -s $(lspci | grep VGA | cut -d" " -f 1)
 ```
 
 
+***
 
 
 ## Tests
@@ -234,7 +235,6 @@ With HW Acceleration:
 
 
 
-
 ### Test 2
 
 
@@ -266,7 +266,7 @@ With HW Acceleration:
 ![](https://i.imgur.com/qHbNtLR.png)
 
 
-
+***
 
 
 
