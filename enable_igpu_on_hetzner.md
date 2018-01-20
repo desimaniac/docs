@@ -293,9 +293,6 @@ Hardware acceleration is currently only available to Plex Pass members.
 
 _Note: **ALL** steps below are essential!_
 
-1. Add the `plexpass` tag to the Cloudbox settings.yml, if it isn't already there (see [this](https://github.com/Cloudbox/Cloudbox/wiki/Configuring-Settings)).
-
-
 1. Update the Emby container (your database and settings will remain intact).
 
    ```shell
@@ -304,7 +301,7 @@ _Note: **ALL** steps below are essential!_
    
    _Note: This step is important because it adds `/dev/dri/renderD128` to the Emby container. HW acceleration will not work without it._ 
 
-3. Enable HW Acceleration in Emby: Gear icon -> Server -> Transcoding -> set "Hardware acceleration:" `Video Acceleration API (VA API) (experimental)`; "VA API Device:" `/dev/dri/renderD128`; and check `Enable hardware encoding`.
+1. Enable HW Acceleration in Emby: Gear icon -> Server -> Transcoding -> set "Hardware acceleration:" `Video Acceleration API (VA API) (experimental)`; "VA API Device:" `/dev/dri/renderD128`; and check `Enable hardware encoding`.
 
 ---
 
