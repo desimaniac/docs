@@ -186,7 +186,6 @@ $ sudo lspci -v -s $(lspci | grep VGA | cut -d" " -f 1)
 ```
 
 
-***
 
 
 
