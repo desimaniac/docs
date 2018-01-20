@@ -1,4 +1,4 @@
-# How to enable iGPU on Hetzner (for Hardware Accelerated Transcoding in Plex)
+# How to enable iGPU on Hetzner (for Hardware Accelerated Transcoding in Plex/Emby)
 
 
 Note: This was tested on the Hetzner's EX41-SSD Server (Intel i7-7700), but should work on other Hetzner servers with supported Intel CPUs (see [this](https://support.plex.tv/hc/en-us/articles/115002178853-Using-Hardware-Accelerated-Streaming) and [this](https://en.wikipedia.org/wiki/Intel_Quick_Sync_Video)).
@@ -271,7 +271,7 @@ To run it:
 
 Hardware acceleration is currently only available to Plex Pass members. 
 
-_Note: **ALL** 3 steps below are essential!_
+_Note: **ALL** steps below are essential!_
 
 1. Add the `plexpass` tag to the Cloudbox settings.yml, if it isn't already there (see [this](https://github.com/Cloudbox/Cloudbox/wiki/Configuring-Settings)).
 
@@ -282,12 +282,29 @@ _Note: **ALL** 3 steps below are essential!_
    sudo ansible-playbook cloudbox.yml --tags update-plex
    ```
    
-   _Note: This step adds `/dev/dri/` to the Plex container. HW acceleration will not work without it._ 
+   _Note: This step is important because it adds `/dev/dri/` to the Plex container. HW acceleration will not work without it._ 
 
-3. Enable HW Acceleration in Plex: Settings -> Server -> Transcoder -> enable `Use hardware acceleration when available`.
+3. Enable HW Acceleration in Plex: Settings -> Server -> Transcoder -> check `Use hardware acceleration when available`.
 
 
+## Enable HW acceleration in Cloudbox Emby
 
+Hardware acceleration is currently only available to Plex Pass members. 
+
+_Note: **ALL** steps below are essential!_
+
+1. Add the `plexpass` tag to the Cloudbox settings.yml, if it isn't already there (see [this](https://github.com/Cloudbox/Cloudbox/wiki/Configuring-Settings)).
+
+
+1. Update the Emby container (your database and settings will remain intact).
+
+   ```shell
+   sudo ansible-playbook cloudbox.yml --tags update-emby
+   ```
+   
+   _Note: This step is important because it adds `/dev/dri/renderD128` to the Emby container. HW acceleration will not work without it._ 
+
+3. Enable HW Acceleration in Emby: Gear icon -> Server -> Transcoding -> set "Hardware acceleration:" `Video Acceleration API (VA API) (experimental)`; "VA API Device:" `/dev/dri/renderD128`; and check `Enable hardware encoding`.
 
 ---
 
