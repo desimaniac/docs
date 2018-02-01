@@ -2,8 +2,16 @@ I like having my media files _loosely_ named with the [scene naming style](https
 
 ```
 Examples:
-- /TV/Gotham/Gotham.S01E01.Pilot.1080p.BluRay.x264-DEMAND.mkv
-- /Movies/Guardians of the Galaxy Vol. 2 (2017)/Guardians.of.the.Galaxy.Vol.2.2017.1080p.BluRay.x264-SPARKS.mkv
+
+TV
+└── Gotham
+    └── Season 01
+        └── Gotham.S01E01.Pilot.1080p.BluRay.x264-DEMAND.mkv
+
+Movies
+└── Guardians of the Galaxy Vol. 2 (2017)
+    └── Guardians.of.the.Galaxy.Vol.2.2017.1080p.BluRay.x264-SPARKS.mkv
+
 ```
 
 I am posting this template here for anyone who may find this helpful.
