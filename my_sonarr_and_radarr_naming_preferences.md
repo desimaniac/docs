@@ -14,7 +14,7 @@ Movies
 
 ```
 
-I am posting this template here for anyone who may find this helpful.
+I am posting this template here for whoever is interested.
 
 
 ## Sonarr
