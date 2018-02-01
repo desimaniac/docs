@@ -40,7 +40,7 @@ These are important, or else the naming format will not work.
 | WEBDL-2160p  | 2160p.WEB    |
 | Bluray-2160p | 2160p.BluRay | 
 
-\*Haven't figured out what to do with these yet so I left them as-is.
+\*Haven't figured out what to do with these yet, so I left them as-is.
 
 
 ### Episode Naming
@@ -145,7 +145,7 @@ These are important, or else the naming format will not work.
 | Raw-HD*      | Raw-HD             |
 
 
-\*Haven't figured out what to do with these yet so I left them as-is.
+\*Haven't figured out what to do with these yet, so I left them as-is.
 
 
 
