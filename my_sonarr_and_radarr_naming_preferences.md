@@ -1,4 +1,4 @@
-I like having my media files _loosely_ named with the [scene naming style](https://scenerules.org/). This format __**is**__ Plex compatible and informative (_I like the convenience of knowing the episode title, quality, proper, edition, and release group by just looking at the filename_). 
+I like having my media files _loosely_ named with the [scene naming style](https://scenerules.org/). This format _**is**_ Plex compatible and informative (_I like the convenience of knowing the episode title, quality, proper, edition, and release group by just looking at the filename_). 
 
 ```
 Examples:
