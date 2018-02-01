@@ -3,7 +3,7 @@ I like having my media files _loosely_ named with the [scene naming style](https
 ```
 Examples:
 
-TV
+TV Shows
 └── Gotham
     └── Season 01
         └── Gotham.S01E01.Pilot.1080p.BluRay.x264-DEMAND.mkv
