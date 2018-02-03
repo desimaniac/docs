@@ -194,7 +194,7 @@ $ sudo lspci -v -s $(lspci | grep VGA | cut -d" " -f 1)
 
 Hardware acceleration is currently only available to Plex Pass members. 
 
-_Note: **ALL** steps below are essential!_
+_Note: **ALL** the steps below are essential!_
 
 1. Add the `plexpass` tag to the Cloudbox settings.yml, if it isn't already there (see [this](https://github.com/Cloudbox/Cloudbox/wiki/Configuring-Settings)).
 
@@ -214,7 +214,7 @@ _Note: **ALL** steps below are essential!_
 
 Hardware acceleration is currently only available to Plex Pass members. 
 
-_Note: **ALL** steps below are essential!_
+_Note: **ALL** the steps below are essential!_
 
 1. Update the Emby container (your database and settings will remain intact).
 
