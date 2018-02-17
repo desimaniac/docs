@@ -254,7 +254,7 @@ Plex transcode: Movie @ 1080p BluRay Remux (H264) --> 4Mbps 720p HD (H264).
 
 #### CPU Usage (`htop`)
 
-Without HW Accleration: ~450%
+Without HW Acceleration: ~450%
 
 ![](https://i.imgur.com/o1f4PUV.png)
 
@@ -286,7 +286,7 @@ Plex transcode: Movie @ 2160p (4K-UHD) BluRay Remux (HEVC) --> 4Mbps 720p HD (H2
 
 #### CPU Usage (`htop`)
 
-Without HW Accleration: ~550%
+Without HW Acceleration: ~550%
 
 ![](https://i.imgur.com/l8xTmi8.png)
 
