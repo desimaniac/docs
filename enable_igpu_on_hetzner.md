@@ -196,7 +196,7 @@ Hardware acceleration is currently only available to Plex Pass members.
 
 _Note: **ALL** the steps below are essential!_
 
-1. Add the `plexpass` tag to the Cloudbox settings.yml, if it isn't already there (see [this](https://github.com/Cloudbox/Cloudbox/wiki/Configuring-Settings)).
+1. Add the `plexpass` tag to the Cloudbox settings.yml, if it isn't already there (see [this](https://github.com/Cloudbox/Cloudbox/wiki/First-Time-Install:-Configuring-Settings)).
 
 
 2. Update the Plex container (your database and settings will remain intact).
