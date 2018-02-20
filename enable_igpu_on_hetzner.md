@@ -212,7 +212,7 @@ _Note: **ALL** the steps below are essential!_
 
 ## Enable HW acceleration in Cloudbox Emby
 
-Hardware acceleration is currently only available to Plex Pass members. 
+Hardware acceleration is currently only available to Plex Pass members (see [this](https://support.plex.tv/articles/115002178853-using-hardware-accelerated-streaming/)). 
 
 _Note: **ALL** the steps below are essential!_
 
