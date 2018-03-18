@@ -1,4 +1,5 @@
-I like having my media files _loosely_ named with the [scene naming style](https://scenerules.org/). This format _**is**_ Plex compatible. And I like the ability to quickly see the info on the release (i.e. the episode title, quality, proper, edition, release group) by just looking at the filename. Another benefit is that Subzero (subtitle) lookups yield more accurate results. 
+I like having my media files _loosely_ named with the [scene naming style](https://scenerules.org/). This format _**works**_ with Plex (even though they recommend [this](https://support.plex.tv/hc/en-us/articles/200220687-Naming-Series-Season-Based-TV-Shows)). I just like the ability to quickly see the info on the release (i.e. the episode title, quality, proper, edition, release group) by just looking at the filename. Another benefit is that Subzero (subtitle) lookups yield more accurate results. 
+
 ```
 Examples:
 
