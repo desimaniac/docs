@@ -207,7 +207,11 @@ _Note: **ALL** the steps below are essential!_
    
    _Note: This step is important because it adds `/dev/dri/` to the Plex container. HW acceleration will not work without it._ 
 
-3. Enable HW Acceleration in Plex: Settings -> Server -> Transcoder -> check `Use hardware acceleration when available`.
+3. Enable HW Acceleration in Plex: 
+
+   - Settings -> Server -> Transcoder
+   
+   - "Use hardware acceleration when available": enabled
 
 
 ## Enable HW acceleration in Cloudbox Emby
@@ -224,7 +228,15 @@ _Note: **ALL** the steps below are essential!_
    
    _Note: This step is important because it adds `/dev/dri/renderD128` to the Emby container. HW acceleration will not work without it._ 
 
-1. Enable HW Acceleration in Emby: Gear icon -> Server -> Transcoding -> set "Hardware acceleration:" `Video Acceleration API (VA API) (experimental)`; "VA API Device:" `/dev/dri/renderD128`; and check `Enable hardware encoding`.
+1. Enable HW Acceleration in Emby: 
+
+   - Gear icon -> Server -> Transcoding
+   
+   - "Hardware acceleration:" `Video Acceleration API (VA API) (experimental)`
+   
+   - "VA API Device:" `/dev/dri/renderD128`
+   
+   - "Enable hardware encoding": enabled
 
 
 ***
