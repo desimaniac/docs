@@ -190,7 +190,7 @@ $ sudo lspci -v -s $(lspci | grep VGA | cut -d" " -f 1)
 
 
 
-## Enable HW acceleration in Cloudbox Plex
+## Enable HW acceleration in Plex for [Cloudbox](https://cloudbox.rocks)
 
 Hardware acceleration is currently only available to Plex Pass members. 
 
@@ -214,9 +214,8 @@ _Note: **ALL** the steps below are essential!_
    - "Use hardware acceleration when available": enabled
 
 
-## Enable HW acceleration in Cloudbox Emby
+## Enable HW acceleration in Emby for [Cloudbox](https://cloudbox.rocks)
 
-Hardware acceleration is currently only available to Plex Pass members (see [this](https://support.plex.tv/articles/115002178853-using-hardware-accelerated-streaming/)). 
 
 _Note: **ALL** the steps below are essential!_
 
