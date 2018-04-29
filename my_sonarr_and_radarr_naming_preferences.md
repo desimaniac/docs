@@ -77,14 +77,14 @@ Yes
 {Series CleanTitle}
 ```
 
-`Series Folder Example: The Series Title 2010`
+> Series Folder Example: The Series Title 2010
 
 #### Season Folder Format
 ```
 Season {season:00}
 ```
 
-`Season Folder Example: Season 01`
+> Season Folder Example: Season 01
 
 Padding the season numbers (e.g. `01`, `02`, etc) is preferred by the scene. This also helps sort your seasons in order when you have 10+ seasons.
 
