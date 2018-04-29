@@ -320,5 +320,5 @@ With HW Acceleration:
 
 ---
 
-<sub>Credit: </sub></br><sub>https://www.reddit.com/r/seedboxes/comments/57uq5e/hardware_video_encoding_on_hetzner_server_with/
+<sub>References: </sub></br><sub>https://www.reddit.com/r/seedboxes/comments/57uq5e/hardware_video_encoding_on_hetzner_server_with/
 </sub>
