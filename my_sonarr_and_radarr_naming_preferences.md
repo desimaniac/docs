@@ -154,6 +154,7 @@ These are important, or else the naming format will not work.
 
 #### Replace Illegal Characters `Yes`
 
+#### Colon Replacement Format: `Replace with Space Dash`
 
 #### Standard Movie Format
 ```
