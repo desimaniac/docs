@@ -52,11 +52,16 @@ Yes
 ```
 
 #### Standard Episode Format
+
+_Note: You can leave {Episode.CleanTitle} out if you feel episode names are too long or want to avoid having to rename based  on changes @ TVDB, later._ 
+
+
 ```
 {Series.CleanTitle}.S{season:00}E{episode:00}.{Episode.CleanTitle}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
 ```
 
 > Single Episode Example: The.Series.Title.2010.S01E01.Episode.Title.1.PROPER.720p.HDTV.x264-RLSGRP
+
 
 #### Daily Episode Format
 ```
