@@ -53,7 +53,7 @@ Yes
 
 #### Standard Episode Format
 
-_Note: You can leave {Episode.CleanTitle} out if you feel episode names are too long or want to avoid having to rename based  on changes @ TVDB, later._ 
+_Note: You can leave out {Episode.CleanTitle} if you feel episode names are too long or want if you want to avoid having fix titles later, due to changes on TVDB._ 
 
 
 ```
