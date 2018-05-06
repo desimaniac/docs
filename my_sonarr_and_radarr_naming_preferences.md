@@ -1,4 +1,6 @@
-I like having my media files _loosely_ named with the [scene naming style](https://scenerules.org/). This format _**works**_ with Plex (even though they recommend [this](https://support.plex.tv/hc/en-us/articles/200220687-Naming-Series-Season-Based-TV-Shows)). I just like the ability to quickly see the info on the release (i.e. the episode title, quality, proper, edition, release group) by just looking at the filename. Another benefit is that Subzero (subtitle) lookups yield more accurate results. 
+I like having my media files _loosely_ named with the [scene naming style](https://scenerules.org/). This format _**works**_ with Plex (even though they recommend [this](https://support.plex.tv/hc/en-us/articles/200220687-Naming-Series-Season-Based-TV-Shows)). I just like the ability to quickly see the info on the release (i.e. the episode quality, proper, edition, release group) by just looking at the filename. Another benefit is that Subzero (subtitle) lookups yield more accurate results. 
+
+_Update: I have decided to remove `{Episode.CleanTitle}` from the naming format because 1) The episode title can sometimes get so big that you have trouble storing/uploading it, and 2) The titles can often change at TVDB._
 
 ```
 Examples:
@@ -6,15 +8,13 @@ Examples:
 TV Shows
 └── Gotham
     └── Season 01
-        └── Gotham.S01E01.Pilot.1080p.BluRay.x264-DEMAND.mkv
+        └── Gotham.S01E01.1080p.BluRay.x264-DEMAND.mkv
 
 Movies
 └── Guardians of the Galaxy Vol. 2 (2017)
     └── Guardians.of.the.Galaxy.Vol.2.2017.1080p.BluRay.x264-SPARKS.mkv
 
 ```
-
-I am posting this template here for whoever is interested.
 
 
 ## Sonarr
@@ -57,25 +57,25 @@ _Note: You can leave out {Episode.CleanTitle} if you feel episode names are too 
 
 
 ```
-{Series.CleanTitle}.S{season:00}E{episode:00}.{Episode.CleanTitle}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
+{Series.CleanTitle}.S{season:00}E{episode:00}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
 ```
 
-> Single Episode Example: The.Series.Title.2010.S01E01.Episode.Title.1.PROPER.720p.HDTV.x264-RLSGRP
+> Single Episode Example: The.Series.Title.2010.S01E01.PROPER.720p.HDTV.x264-RLSGRP
 
 
 #### Daily Episode Format
 ```
-{Series.CleanTitle}.{Air.Date}.{Episode.CleanTitle}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
+{Series.CleanTitle}.{Air.Date}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
 ```
 
-> Daily-Episode Example: The.Series.Title.2010.2013.10.30.Episode.Title.1.PROPER.720p.HDTV.x264-RLSGRP
+> Daily-Episode Example: The.Series.Title.2010.2013.10.30.PROPER.720p.HDTV.x264-RLSGRP
 
 #### Anime Episode Format
 ```
-{Series.CleanTitle}.S{season:00}E{episode:00}.{Episode.CleanTitle}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
+{Series.CleanTitle}.S{season:00}E{episode:00}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
 ```
 
-> Anime Episode Example: The.Series.Title.2010.S01E01.Episode.Title.1.V2.720p.HDTV.x264-RLSGRP
+> Anime Episode Example: The.Series.Title.2010.S01E01.720p.HDTV.x264-RLSGRP
 
 #### Series Folder Format
 ```
@@ -98,9 +98,9 @@ Padding the season numbers (e.g. `01`, `02`, etc) is preferred by the scene. Thi
 Prefixed Range
 ```
 
->Multi-Episode Example: The.Series.Title.2010.S01E01-E03.Episode.Title.PROPER.720p.HDTV.x264-RLSGRP
+>Multi-Episode Example: The.Series.Title.2010.S01E01-E03.PROPER.720p.HDTV.x264-RLSGRP
 >
->Anime Multi-Episode Example: The.Series.Title.2010.S01E01-E03.Episode.Title.V2.720p.HDTV.x264-RLSGRP
+>Anime Multi-Episode Example: The.Series.Title.2010.S01E01-E03.720p.HDTV.x264-RLSGRP
 
 Even though releases sometimes use the `repeat` style for multi episode TV shows (e.g. S01E01E02), the scene actually prefers the `Prefixed Range` style (e.g. S01E01-E02), which is also the naming style [Plex](https://support.plex.tv/hc/en-us/articles/200220687-Naming-Series-Season-Based-TV-Shows) recommends.
 
