@@ -164,7 +164,7 @@ Yes
 
 #### Colon Replacement Format: 
 ```
-Replace with Space Dash
+Delete
 ```
 
 #### Standard Movie Format
