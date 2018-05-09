@@ -48,7 +48,7 @@ These are important, or else the naming format will not work.
 
 #### Replace Illegal Characters 
 ```
-Yes
+Replace with Space Dash
 ```
 
 #### Standard Episode Format
