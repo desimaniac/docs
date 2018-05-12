@@ -91,7 +91,7 @@ Season {season:00}
 
 Padding the season numbers (e.g. `01`, `02`, etc) is preferred by the scene. This also helps sort your seasons in order when you have 10+ seasons.
 
-_This style is also preferred by Plex._
+_This style is also preferred by [Plex](https://support.plex.tv/hc/en-us/articles/200220687-Naming-Series-Season-Based-TV-Shows)._
 
 #### Multi-Episode Style
 ```
