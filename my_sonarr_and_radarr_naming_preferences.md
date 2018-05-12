@@ -16,8 +16,8 @@ Movies
 
 ```
 
-#### [Sonarr](#sonarr)
-#### [Radarr](#radarr)
+#### [Sonarr](#sonarr-1)
+#### [Radarr](#radarr-1)
 
 
 ---
