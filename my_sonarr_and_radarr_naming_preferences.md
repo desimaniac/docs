@@ -16,6 +16,11 @@ Movies
 
 ```
 
+#### [Sonarr](#sonarr)
+#### [Radarr](#radarr)
+
+
+---
 
 ## Sonarr
 
@@ -48,7 +53,7 @@ These are important, or else the naming format will not work.
 
 #### Replace Illegal Characters 
 ```
-Replace with Space Dash
+Yes
 ```
 
 #### Standard Episode Format
@@ -164,7 +169,7 @@ Yes
 
 #### Colon Replacement Format: 
 ```
-Delete
+Replace with Space Dash
 ```
 
 #### Standard Movie Format
