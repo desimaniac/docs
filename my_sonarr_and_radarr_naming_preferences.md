@@ -1,6 +1,6 @@
 I like having my media files _loosely_ named with the [scene naming style](https://scenerules.org/). This format _**works**_ with Plex (even though they recommend [this](https://support.plex.tv/hc/en-us/articles/200220687-Naming-Series-Season-Based-TV-Shows)). I just like the ability to quickly see the info on the release (i.e. the episode quality, proper, edition, release group) by just looking at the filename. Another benefit is that Subzero (subtitle) lookups yield more accurate results. 
 
-_Update: I have decided to remove `{Episode.CleanTitle}` from the naming format because 1) The episode titles can sometimes get so large that you have trouble storing/uploading it, and 2) The titles can often change on TVDB, making it a nuisance to keep correcting._
+_Update: I have decided to remove `{Episode.CleanTitle}` from the naming format because 1) The episode titles can sometimes get so large that you have trouble storing/uploading it, and 2) The titles can often change on TVDB, making it a nuisance to fix later. However, if you decide to keep it, you may leave it in (it comes after the episode number and before the quality proper tags)._
 
 ```
 Examples:
@@ -53,8 +53,6 @@ Replace with Space Dash
 
 #### Standard Episode Format
 
-_Note: You can leave out {Episode.CleanTitle} if you feel episode names are too long or want if you want to avoid having fix titles later, due to changes on TVDB._ 
-
 
 ```
 {Series.CleanTitle}.S{season:00}E{episode:00}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
@@ -92,6 +90,8 @@ Season {season:00}
 > Season Folder Example: Season 01
 
 Padding the season numbers (e.g. `01`, `02`, etc) is preferred by the scene. This also helps sort your seasons in order when you have 10+ seasons.
+
+_This style is also preferred by Plex._
 
 #### Multi-Episode Style
 ```
