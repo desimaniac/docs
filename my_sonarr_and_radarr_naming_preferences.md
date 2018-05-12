@@ -15,12 +15,14 @@ Movies
     └── Guardians.of.the.Galaxy.Vol.2.2017.1080p.BluRay.x264-SPARKS.mkv
 
 ```
+---
+
 
 ### [Sonarr](#sonarr-1)
 ### [Radarr](#radarr-1)
 
-
 ---
+
 
 ## Sonarr
 
