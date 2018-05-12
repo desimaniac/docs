@@ -1,6 +1,6 @@
 I like having my media files _loosely_ named with the [scene naming style](https://scenerules.org/). This format _**works**_ with Plex (even though they recommend [this](https://support.plex.tv/hc/en-us/articles/200220687-Naming-Series-Season-Based-TV-Shows)). I just like the ability to quickly see the info on the release (i.e. the episode quality, proper, edition, release group) by just looking at the filename. Another benefit is that Subzero (subtitle) lookups yield more accurate results. 
 
-_Update: I have decided to remove `{Episode.CleanTitle}` from the naming format because 1) The episode title can sometimes get so big that you have trouble storing/uploading it, and 2) The titles can often change on TVDB._
+_Update: I have decided to remove `{Episode.CleanTitle}` from the naming format because 1) The episode titles can sometimes get so large that you have trouble storing/uploading it, and 2) The titles can often change on TVDB, making it a nuisance to keep correcting._
 
 ```
 Examples:
