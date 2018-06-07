@@ -3,7 +3,7 @@
 
 Note: This was tested on Hetzner's EX41-SSD Server, running Intel i7-7700 on Ubuntu Server 16.04, but should work on other Hetzner servers with supported Intel CPUs (see [this](https://support.plex.tv/hc/en-us/articles/115002178853-Using-Hardware-Accelerated-Streaming) and [this](https://en.wikipedia.org/wiki/Intel_Quick_Sync_Video)).
 
-_Note: If you have a Coffee Lake or newer CPU (e.g. the Intel i7-8700 in EX61-NVME), you will either need to update to Ubuntu Server 18.04, or update the kernel on 16.04 (see [this](https://github.com/pimlie/ubuntu-mainline-kernel.sh)), to have /dev/dri show up._
+_Note: If you have a Coffee Lake or newer CPU (e.g. the Intel i7-8700 in EX61-NVME), you will need to either 1) update to Ubuntu Server 18.04, or 2) update the kernel on 16.04 (see [this](https://github.com/pimlie/ubuntu-mainline-kernel.sh)), to have /dev/dri show up._
 
 ## When iGPU isnt loaded...
 
