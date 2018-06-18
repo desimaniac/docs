@@ -79,6 +79,8 @@ Hetzner disables loading of video card drivers unless install desktop OS. So to 
 
 2. Open `/etc/default/grub.d/hetzner.cfg` (e.g. `sudo nano /etc/default/grub.d/hetzner.cfg`) and delete `nomodeset` from the   `GRUB_CMDLINE_LINUX_DEFAULT` line.
 
+   _Note: For Ubuntu 18.04, this may be located at `/etc/default/grub/hetzner.cfg`._
+  
    Before: 
    ```shell
    GRUB_HIDDEN_TIMEOUT_QUIET=false
