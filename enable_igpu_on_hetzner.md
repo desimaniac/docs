@@ -204,7 +204,7 @@ _Note: **ALL** the steps below are essential!_
 2. Update the Plex container (your database and settings will remain intact).
 
    ```shell
-   sudo ansible-playbook cloudbox.yml --tags update-plex
+   sudo ansible-playbook cloudbox.yml --tags plex
    ```
    
    _Note: This step is important because it adds `/dev/dri/` to the Plex container. HW acceleration will not work without it._ 
@@ -224,7 +224,7 @@ _Note: **ALL** the steps below are essential!_
 1. Update the Emby container (your database and settings will remain intact).
 
    ```shell
-   sudo ansible-playbook cloudbox.yml --tags update-emby
+   sudo ansible-playbook cloudbox.yml --tags emby
    ```
    
    _Note: This step is important because it adds `/dev/dri/renderD128` to the Emby container. HW acceleration will not work without it._ 
