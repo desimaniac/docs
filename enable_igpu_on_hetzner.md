@@ -99,13 +99,13 @@ Hetzner disables loading of video card drivers unless install desktop OS. So to 
    
      - After: 
       
-      ```shell
-       GRUB_HIDDEN_TIMEOUT_QUIET=false
-       GRUB_CMDLINE_LINUX_DEFAULT="net.ifnames=0"
+       ```shell
+        GRUB_HIDDEN_TIMEOUT_QUIET=false
+        GRUB_CMDLINE_LINUX_DEFAULT="net.ifnames=0"
 
-       # only use text mode - other modes may scramble screen
-       GRUB_GFXPAYLOAD_LINUX="text"
-       ```
+        # only use text mode - other modes may scramble screen
+        GRUB_GFXPAYLOAD_LINUX="text"
+        ```
 
 3. Reload grub and reboot.
    
