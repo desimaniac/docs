@@ -44,60 +44,68 @@ Hetzner disables loading of video card drivers unless install desktop OS. So to 
 
 1. Open `/etc/modprobe.d/blacklist-hetzner.conf` (e.g. `sudo nano /etc/modprobe.d/blacklist-hetzner.conf`) and comment-out (add a `#` in front of) all lines referencing `i915` driver or similar. 
 
+   - Example:
+     
+     - Before: 
   
-   Before:
-   ```shell
-   ### Hetzner Online GmbH - installimage
-   ### silence any onboard speaker
-   blacklist pcspkr
-   blacklist snd_pcsp
-   ### i915 driver blacklisted due to various bugs
-   ### especially in combination with nomodeset
-   blacklist i915 
-   blacklist i915_bdw
-   ### mei driver blacklisted due to serious bugs
-   blacklist mei
-   blacklist mei-me
-   ```
+       ```shell
+       ### Hetzner Online GmbH - installimage
+       ### silence any onboard speaker
+       blacklist pcspkr
+       blacklist snd_pcsp
+       ### i915 driver blacklisted due to various bugs
+       ### especially in combination with nomodeset
+       blacklist i915 
+       blacklist i915_bdw
+       ### mei driver blacklisted due to serious bugs
+       blacklist mei
+       blacklist mei-me
+       ```
   
-  
-   After:
-   ```shell
-   ### Hetzner Online GmbH - installimage
-   ### silence any onboard speaker
-   blacklist pcspkr
-   blacklist snd_pcsp
-   ### i915 driver blacklisted due to various bugs
-   ### especially in combination with nomodeset
-   #blacklist i915 
-   #blacklist i915_bdw
-   ### mei driver blacklisted due to serious bugs
-   blacklist mei
-   blacklist mei-me
-   ```
+     - After: 
+     
+       ```shell
+       ### Hetzner Online GmbH - installimage
+       ### silence any onboard speaker
+       blacklist pcspkr
+       blacklist snd_pcsp
+       ### i915 driver blacklisted due to various bugs
+       ### especially in combination with nomodeset
+       #blacklist i915 
+       #blacklist i915_bdw
+       ### mei driver blacklisted due to serious bugs
+       blacklist mei
+       blacklist mei-me
+       ```
 
 
 2. Open `/etc/default/grub.d/hetzner.cfg` (e.g. `sudo nano /etc/default/grub.d/hetzner.cfg`) and delete `nomodeset` from the   `GRUB_CMDLINE_LINUX_DEFAULT` line.
 
-   _Note: For Ubuntu 18.04, this file may just be `/etc/default/grub`._
-  
-   Before: 
-   ```shell
-   GRUB_HIDDEN_TIMEOUT_QUIET=false
-   GRUB_CMDLINE_LINUX_DEFAULT="nomodeset net.ifnames=0"
-
-   # only use text mode - other modes may scramble screen
-   GRUB_GFXPAYLOAD_LINUX="text"
-   ```   
+   _Note 1: For Ubuntu 18.04, this file may just be `/etc/default/grub`._
    
-   After: 
-   ```shell
-   GRUB_HIDDEN_TIMEOUT_QUIET=false
-   GRUB_CMDLINE_LINUX_DEFAULT="net.ifnames=0"
+   _Note 2: Your `GRUB_CMDLINE_LINUX_DEFAULT` might have something else in there, e.g. `GRUB_CMDLINE_LINUX_DEFAULT="nomodeset consoleblank=0"`. That is OK. You are only taking out the word `nomodeset` from that line._
+  
+   - Example:
+     
+     - Before: 
+   
+       ```shell
+       GRUB_HIDDEN_TIMEOUT_QUIET=false
+       GRUB_CMDLINE_LINUX_DEFAULT="nomodeset net.ifnames=0"
 
-   # only use text mode - other modes may scramble screen
-   GRUB_GFXPAYLOAD_LINUX="text"
-   ```
+       # only use text mode - other modes may scramble screen
+       GRUB_GFXPAYLOAD_LINUX="text"
+       ```   
+   
+     - After: 
+      
+      ```shell
+       GRUB_HIDDEN_TIMEOUT_QUIET=false
+       GRUB_CMDLINE_LINUX_DEFAULT="net.ifnames=0"
+
+       # only use text mode - other modes may scramble screen
+       GRUB_GFXPAYLOAD_LINUX="text"
+       ```
 
 3. Reload grub and reboot.
    
@@ -123,6 +131,8 @@ crw-rw----  1 root video 226, 128 Sep 30 05:14 renderD128
 
 
 `vainfo` will now show the details of the video driver.
+
+_Note: If the following doesn't work, that's OK. As long as `/dev/dri` exists with contents, you can move on to the next step`._
 
 ```shell
 $ vainfo
