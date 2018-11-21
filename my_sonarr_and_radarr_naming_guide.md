@@ -1,3 +1,21 @@
+# My Sonarr and Radarr Naming Guide
+
+
+---
+
+<!-- TOC depthFrom:1 depthTo:2 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [Introduction](#introduction)
+- [Sonarr](#sonarr)
+- [Radarr](#radarr)
+
+<!-- /TOC -->
+
+---
+
+
+# Introduction
+
 I like having my media files _loosely_ named with the [scene naming style](https://scenerules.org/). This format _**works**_ with Plex (even though they recommend [this](https://support.plex.tv/hc/en-us/articles/200220687-Naming-Series-Season-Based-TV-Shows)). I just like the ability to quickly see the info on the release (i.e. the episode quality, proper, edition, release group) by just looking at the filename. Another benefit is that Subzero (subtitle) lookups yield more accurate results. 
 
 _Update: I have decided to remove `{Episode.CleanTitle}` from the naming format because 1) The episode titles can sometimes get so large that you have trouble storing/uploading it, and 2) The titles can often change on TVDB, making it a nuisance to fix later. However, if you decide to keep it, you may leave it in (it comes after the episode number and before the quality proper tags)._
@@ -18,13 +36,7 @@ Movies
 ---
 
 
-### [Sonarr](#sonarr-1)
-### [Radarr](#radarr-1)
-
----
-
-
-## Sonarr
+# Sonarr
 
 
 ### Quality Definitions
@@ -87,7 +99,7 @@ Yes
 {Series Title}
 ```
 
-> Series Folder Example: The Series Title 2010
+> Series Folder Example: The Series Title (2010)
 
 #### Season Folder Format
 ```
@@ -120,7 +132,7 @@ Even though releases sometimes use the `repeat` style for multi episode TV shows
 ***
 
 
-## Radarr
+# Radarr
 
 
 ### Quality Definitions
