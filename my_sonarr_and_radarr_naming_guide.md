@@ -16,17 +16,19 @@
 
 # Introduction
 
-I like having my media files _loosely_ named with the [scene naming style](https://scenerules.org/). This format _**works**_ with Plex (even though they recommend [this](https://support.plex.tv/hc/en-us/articles/200220687-Naming-Series-Season-Based-TV-Shows)). I just like the ability to quickly see the info on the release (i.e. the episode quality, proper, edition, release group) by just looking at the filename. Another benefit is that Subzero (subtitle) lookups yield more accurate results. 
+I like having my media files _loosely_ named with the [scene naming style](https://scenerules.org/). This format _**works**_ with Plex (even though they recommend [this](https://support.plex.tv/hc/en-us/articles/200220687-Naming-Series-Season-Based-TV-Shows)). I just like the ability to quickly see the info on the release (i.e. the episode quality, proper, edition, release group) by just looking at the filename. Another benefit is that Subzero (subtitle) lookups yield more accurate results.
 
 _Update: I have decided to remove `{Episode.CleanTitle}` from the naming format because 1) The episode titles can sometimes get so large that you have trouble storing/uploading it, and 2) The titles can often change on TVDB, making it a nuisance to fix later. However, if you decide to keep it, you may leave it in (it comes after the episode number and before the quality proper tags)._
+
+_Update 2: Added Year to TV Show Titles._
 
 ```
 Examples:
 
 TV Shows
-└── Gotham
+└── Gotham (2014)
     └── Season 01
-        └── Gotham.S01E01.1080p.BluRay.x264-DEMAND.mkv
+        └── Gotham.2014.S01E01.1080p.BluRay.x264-DEMAND.mkv
 
 Movies
 └── Guardians of the Galaxy Vol. 2 (2017)
@@ -41,7 +43,7 @@ Movies
 
 ### Quality Definitions
 
-These are important, or else the naming format will not work. 
+These are important, or else the naming format will not work.
 
 | Quality      | Title        |
 | ------------ | ------------ |
@@ -58,14 +60,14 @@ These are important, or else the naming format will not work.
 | Bluray-1080p | 1080p.BluRay |
 | HDTV-2160p   | 2160p.HDTV   |
 | WEBDL-2160p  | 2160p.WEB    |
-| Bluray-2160p | 2160p.BluRay | 
+| Bluray-2160p | 2160p.BluRay |
 
 \*Haven't figured out what to do with these yet, so I left them as-is.
 
 
 ### Episode Naming
 
-#### Replace Illegal Characters 
+#### Replace Illegal Characters
 ```
 Yes
 ```
@@ -74,7 +76,7 @@ Yes
 
 
 ```
-{Series.CleanTitle}.S{season:00}E{episode:00}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
+{Series.CleanTitleYear}.S{season:00}E{episode:00}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
 ```
 
 > Single Episode Example: The.Series.Title.2010.S01E01.PROPER.720p.HDTV.x264-RLSGRP
@@ -82,24 +84,26 @@ Yes
 
 #### Daily Episode Format
 ```
-{Series.CleanTitle}.{Air.Date}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
+{Series.CleanTitleYear}.{Air.Date}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
 ```
 
 > Daily-Episode Example: The.Series.Title.2010.2013.10.30.PROPER.720p.HDTV.x264-RLSGRP
 
 #### Anime Episode Format
 ```
-{Series.CleanTitle}.S{season:00}E{episode:00}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
+{Series.CleanTitleYear}.S{season:00}E{episode:00}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
 ```
 
 > Anime Episode Example: The.Series.Title.2010.S01E01.720p.HDTV.x264-RLSGRP
 
 #### Series Folder Format
 ```
-{Series Title}
+{Series TitleYear}
 ```
 
 > Series Folder Example: The Series Title (2010)
+
+_Doing `{Series CleanTitleYear}` would add the year without the parenthesis (i.e. `The Series Title 2010`), which is why I had to do `{Series TitleYear}`._
 
 #### Season Folder Format
 ```
@@ -137,7 +141,7 @@ Even though releases sometimes use the `repeat` style for multi episode TV shows
 
 ### Quality Definitions
 
-These are important, or else the naming format will not work. 
+These are important, or else the naming format will not work.
 
 
 | Quality      | Title              |
@@ -176,12 +180,12 @@ These are important, or else the naming format will not work.
 
 ### Movie Naming
 
-#### Replace Illegal Characters 
+#### Replace Illegal Characters
 ```
 Yes
 ```
 
-#### Colon Replacement Format: 
+#### Colon Replacement Format:
 ```
 Replace with Space Dash
 ```
