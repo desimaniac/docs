@@ -74,7 +74,7 @@ Yes
 #### Standard Episode Format
 
 ```
-{Series.CleanTitle}.S{season:00}E{episode:00}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
+{Series.CleanTitleYear}.S{season:00}E{episode:00}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
 ```
 
 > Single Episode Example: The.Series.Title.2010.S01E01.PROPER.720p.HDTV.x264-RLSGRP
@@ -83,7 +83,7 @@ Yes
 #### Daily Episode Format
 
 ```
-{Series.CleanTitle}.{Air.Date}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
+{Series.CleanTitleYear}.{Air.Date}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
 ```
 
 > Daily-Episode Example: The.Series.Title.2010.2013.10.30.PROPER.720p.HDTV.x264-RLSGRP
@@ -91,7 +91,7 @@ Yes
 #### Anime Episode Format
 
 ```
-{Series.CleanTitle}.S{season:00}E{episode:00}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
+{Series.CleanTitleYear}.S{season:00}E{episode:00}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
 ```
 
 > Anime Episode Example: The.Series.Title.2010.S01E01.720p.HDTV.x264-RLSGRP
