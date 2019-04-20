@@ -37,9 +37,7 @@ Movies
 ```
 ---
 
-
 # Sonarr
-
 
 ### Quality Definitions
 
@@ -68,35 +66,38 @@ These are important, or else the naming format will not work.
 ### Episode Naming
 
 #### Replace Illegal Characters
+
 ```
 Yes
 ```
 
 #### Standard Episode Format
 
-
 ```
-{Series.CleanTitleYear}.S{season:00}E{episode:00}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
+{Series.CleanTitle}.S{season:00}E{episode:00}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
 ```
 
 > Single Episode Example: The.Series.Title.2010.S01E01.PROPER.720p.HDTV.x264-RLSGRP
 
 
 #### Daily Episode Format
+
 ```
-{Series.CleanTitleYear}.{Air.Date}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
+{Series.CleanTitle}.{Air.Date}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
 ```
 
 > Daily-Episode Example: The.Series.Title.2010.2013.10.30.PROPER.720p.HDTV.x264-RLSGRP
 
 #### Anime Episode Format
+
 ```
-{Series.CleanTitleYear}.S{season:00}E{episode:00}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
+{Series.CleanTitle}.S{season:00}E{episode:00}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
 ```
 
 > Anime Episode Example: The.Series.Title.2010.S01E01.720p.HDTV.x264-RLSGRP
 
 #### Series Folder Format
+
 ```
 {Series TitleYear}
 ```
@@ -106,6 +107,7 @@ Yes
 _Doing `{Series CleanTitleYear}` would add the year without the parenthesis (i.e. `The Series Title 2010`), which is why I had to do `{Series TitleYear}`._
 
 #### Season Folder Format
+
 ```
 Season {season:00}
 ```
@@ -117,6 +119,7 @@ Padding the season numbers (e.g. `01`, `02`, etc) is preferred by the scene. Thi
 _This style is also preferred by [Plex](https://support.plex.tv/hc/en-us/articles/200220687-Naming-Series-Season-Based-TV-Shows)._
 
 #### Multi-Episode Style
+
 ```
 Prefixed Range
 ```
