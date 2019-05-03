@@ -83,10 +83,14 @@ Yes
 #### Daily Episode Format
 
 ```
-{Series.CleanTitleYear}.{Air.Date}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
+{Series.CleanTitle}.{Air.Date}.{QUALITY.REAL}.{QUALITY.PROPER}.{Quality.Title}.{MediaInfo.VideoCodec}-{RELEASE.GROUP}
 ```
 
-> Daily-Episode Example: The.Series.Title.2010.2013.10.30.PROPER.720p.HDTV.x264-RLSGRP
+> Daily-Episode Example: The.Series.Title.2013.10.30.PROPER.720p.HDTV.x264-RLSGRP
+
+_Plex has issues matching daily show seasons when using `CleanTitleYear`._
+
+
 
 #### Anime Episode Format
 
