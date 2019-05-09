@@ -138,9 +138,7 @@ Even though releases sometimes use the `repeat` style for multi episode TV shows
 
 ***
 
-
 # Radarr
-
 
 ### Quality Definitions
 
@@ -179,9 +177,12 @@ These are important, or else the naming format will not work.
 
 \*Haven't figured out what to do with these yet, so I left them as-is.
 
-
-
 ### Movie Naming
+
+#### Rename Movies
+```
+Yes
+```
 
 #### Replace Illegal Characters
 ```
@@ -203,7 +204,7 @@ Replace with Space Dash
 
 #### Movie Folder Format
 ```
-{Movie CleanTitle} ({Release Year})
+{Movie Title} ({Release Year})
 ```
 
->Movie Folder Example: The Movie Title (2010)
+>Movie Folder Example: The Movie - Title (2010)
